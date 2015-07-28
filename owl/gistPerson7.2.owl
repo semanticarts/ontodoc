@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+<!ENTITY gist "http://ontologies.semanticarts.com/gist#">]>
+<rdf:RDF xml:base="http://ontologies.semanticarts.com/o/gistPerson" xmlns:owl="&owl;" xmlns:rdf="&rdf;" xmlns:rdfs="&rdfs;"  xmlns:gist="&gist;">
+<!-- Generated from Sheet.270 -->
+<owl:Ontology rdf:about="http://ontologies.semanticarts.com/o/gistPerson">
+	<rdfs:comment>gistPerson</rdfs:comment>
+	<rdfs:comment>gist7.2 Person</rdfs:comment>
+	<owl:versionIRI rdf:resource="http://ontologies.semanticarts.com/o/gistPerson7.2"/>
+	<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Created with e6Tools Graphical OWL Editor from S:\_SemanticArts\Offerings\gist\__internallyReleasedGists\_gist7.2 May 2015\gist7.2a.vsd Page:person</owl:versionInfo>
+	<owl:imports rdf:resource="http://ontologies.semanticarts.com/o/gistPhysicalThing7.2"/>
+	<owl:imports rdf:resource="http://ontologies.semanticarts.com/o/gistAddress7.2"/>
+</owl:Ontology>
+<!-- Generated from Sheet.244 -->
+<owl:ObjectProperty rdf:about="&gist;offspringOf">
+	<owl:inverseOf rdf:resource="&gist;parentOf"/>
+	<rdfs:domain rdf:resource="&gist;LivingThing"/>
+	<rdfs:range rdf:resource="&gist;LivingThing"/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="&gist;parentOf">
+</owl:ObjectProperty>
+<owl:Class rdf:about="&gist;LivingThing"/>
+<owl:Class rdf:about="&gist;LivingThing"/>
+<!-- Generated from Sheet.273 -->
+<owl:ObjectProperty rdf:about="&gist;hasDeathDate">
+	<rdfs:comment>Date a living thing died</rdfs:comment>
+	<rdfs:domain rdf:resource="&gist;LivingThing"/>
+	<rdfs:range rdf:resource="&gist;TimeInstant"/>
+</owl:ObjectProperty>
+<owl:Class rdf:about="&gist;LivingThing"/>
+<owl:Class rdf:about="&gist;TimeInstant"/>
+<!-- Generated from Sheet.275 -->
+<owl:ObjectProperty rdf:about="&gist;hasBirthDate">
+	<rdfs:comment>Date a living thing was "born" (or germinated, for plants). </rdfs:comment>
+	<rdfs:domain rdf:resource="&gist;LivingThing"/>
+	<rdfs:range rdf:resource="&gist;TimeInstant"/>
+</owl:ObjectProperty>
+<owl:Class rdf:about="&gist;LivingThing"/>
+<owl:Class rdf:about="&gist;TimeInstant"/>
+<!-- Generated from Sheet.277 -->
+<owl:ObjectProperty rdf:about="&gist;actualStart">
+</owl:ObjectProperty>
+<!-- Generated from Sheet.279 -->
+<owl:ObjectProperty rdf:about="&gist;actualEnd">
+</owl:ObjectProperty>
+<!-- Generated from Sheet.296 -->
+<owl:Class rdf:about="&gist;LivingThing">
+	<rdfs:comment>Something that is or at some point was alive and growing.</rdfs:comment>
+	<owl:intersectionOf rdf:parseType="Collection">
+		<owl:Class rdf:about="&gist;PhysicalIdentifiableItem" />
+		<owl:Restriction>
+			<owl:onProperty rdf:resource="&gist;offspringOf"/>
+			<owl:someValuesFrom rdf:resource="&gist;LivingThing"/>
+		</owl:Restriction>
+		<owl:Restriction>
+			<owl:onProperty rdf:resource="&gist;hasBirthDate"/>
+			<owl:someValuesFrom rdf:resource="&gist;TimeInstant"/>
+		</owl:Restriction>
+	</owl:intersectionOf>
+</owl:Class>
+<owl:Class rdf:about="&gist;LivingThing">
+	<rdfs:label>Living Thing</rdfs:label>
+</owl:Class>
+<owl:AnnotationProperty rdf:about="&rdfs;label"/>
+<owl:Class rdf:about="&gist;LivingThing">
+	<rdfs:comment rdf:datatype="&xsd;string">NEGATIVE EXAMPLE: fictional life forms such as Unicorns or Mickie Mouse</rdfs:comment>
+</owl:Class>
+<owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+<owl:Class rdf:about="&gist;LivingThing">
+	<rdfs:comment rdf:datatype="&xsd;string">EXAMPLE: a cat, a mushroom, a tree</rdfs:comment>
+</owl:Class>
+<owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+<owl:Class rdf:about="&gist;LivingThing">
+	<rdfs:comment rdf:datatype="&xsd;string">NOTE: Is or at some point was alive and growing.  With open world you never know if it has since died.</rdfs:comment>
+</owl:Class>
+<owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+<!-- Generated from Sheet.286 -->
+<owl:Class rdf:about="&gist;PhysicalIdentifiableItem">
+</owl:Class>
+<owl:ObjectProperty rdf:about="&gist;offspringOf"/>
+<owl:ObjectProperty rdf:about="&gist;hasBirthDate"/>
+<!-- Generated from Sheet.308 -->
+<owl:Class rdf:about="&gist;Person">
+	<rdfs:comment>This is a member of homo sapiens, who has lived at some point, and may or may not be dead. With open world you never know if someone has died. Fictitious people are not persons.</rdfs:comment>
+	<owl:intersectionOf rdf:parseType="Collection">
+		<owl:Class rdf:about="&gist;LivingThing" />
+		<owl:Restriction>
+			<owl:onProperty rdf:resource="&gist;name"/>
+			<owl:someValuesFrom rdf:resource="&xsd;string"/>
+		</owl:Restriction>
+		<owl:Restriction>
+			<owl:onProperty rdf:resource="&gist;offspringOf"/>
+			<owl:someValuesFrom rdf:resource="&gist;Person"/>
+		</owl:Restriction>
+	</owl:intersectionOf>
+</owl:Class>
+<owl:Class rdf:about="&gist;Person">
+	<rdfs:label>Person</rdfs:label>
+</owl:Class>
+<owl:AnnotationProperty rdf:about="&rdfs;label"/>
+<owl:Class rdf:about="&gist;Person">
+	<rdfs:comment rdf:datatype="&xsd;string">NEGATIVE EXAMPLE: fictional characters</rdfs:comment>
+</owl:Class>
+<owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+<!-- Generated from Sheet.302 -->
+<owl:Class rdf:about="&gist;LivingThing">
+</owl:Class>
+<owl:DatatypeProperty rdf:about="&gist;name"/>
+<owl:ObjectProperty rdf:about="&gist;offspringOf"/>
+<!-- Generated from Sheet.272 -->
+<owl:ObjectProperty rdf:about="&gist;hasDeathDate">
+	<rdfs:subPropertyOf rdf:resource="&gist;actualEnd" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="&gist;actualEnd"/>
+<!-- Generated from Sheet.281 -->
+<owl:ObjectProperty rdf:about="&gist;hasBirthDate">
+	<rdfs:subPropertyOf rdf:resource="&gist;actualStart" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="&gist;actualStart"/>
+</rdf:RDF>

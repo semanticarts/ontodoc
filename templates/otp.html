@@ -1,0 +1,47 @@
+<a id="{{ uri.split('#')[1] }}"></a>
+<div class="doc-section owl-otp">
+	<h4><a href="{{ uri|to_link }}">{{ uri|to_qname }}</a></h4>
+	
+	{% if obj.comment.__len__() != 0: %}
+	{% for comment in obj.comment: %}
+		<p>{{ comment }}</p>
+	{% endfor %}
+	{% endif %}
+	
+	{% if obj.type.__len__() != 0: %}
+	<h5>Type</h5>
+	<ul>
+	{% for type in obj.type: %}
+		<li><a href="{{ type|to_link }}">{{ type|to_qname }}</a></li>
+	{% endfor %}
+	</ul>
+	{% endif %}
+	
+	{% if obj.domain.__len__() != 0: %}
+	<h5>Domain</h5>
+	<ul>
+	{% for domain in obj.domain: %}
+		<li><a href="{{ domain|to_link }}">{{ domain|to_qname }}</a></li>
+	{% endfor %}
+	</ul>
+	{% endif %}
+
+	{% if obj.range.__len__() != 0: %}
+	<h5>Range</h5>
+	<ul>
+	{% for range in obj.range: %}
+		<li><a href="{{ range|to_link }}">{{ range|to_qname }}</a></li>
+	{% endfor %}
+	</ul>
+	{% endif %}
+	
+	{% if obj.inverse.__len__() != 0: %}
+	<h5>Inverse</h5>
+	<ul>
+	{% for inverse in obj.inverse: %}
+		<li><a href="{{ inverse|to_link }}">{{ inverse|to_qname }}</a></li>
+	{% endfor %}
+	</ul>
+	{% endif %}
+	
+</div>

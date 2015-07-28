@@ -1,0 +1,10 @@
+<div class="doc-section owl-dtp">
+	<h4><a href="{{ uri|to_link }}">{{ uri|to_qname }}</a></h4>
+	
+	{% if obj.comment.__len__() != 0: %}
+	{% for comment in obj.comment: %}
+		<p>{{ comment }}</p>
+	{% endfor %}
+	{% endif %}
+	
+</div>

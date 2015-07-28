@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+<!ENTITY gist "http://ontologies.semanticarts.com/gist#">]>
+<rdf:RDF xml:base="http://ontologies.semanticarts.com/o/gistAddress" xmlns:owl="&owl;" xmlns:rdf="&rdf;" xmlns:rdfs="&rdfs;"  xmlns:gist="&gist;">
+<!-- Generated from Sheet.481 -->
+<owl:Ontology rdf:about="http://ontologies.semanticarts.com/o/gistAddress">
+	<rdfs:comment>gistAddress</rdfs:comment>
+	<rdfs:comment>gist7.2 Address</rdfs:comment>
+	<owl:versionIRI rdf:resource="http://ontologies.semanticarts.com/o/gistAddress7.2"/>
+	<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Created with e6Tools Graphical OWL Editor from \\EXCHANGESERVER\SemanticArts\_SemanticArts\Offerings\gist\__internallyReleasedGists\_gist7.2 May 2015\gist7.2.vsd Page:address</owl:versionInfo>
+	<owl:imports rdf:resource="http://ontologies.semanticarts.com/o/gistContent7.2"/>
+	<owl:imports rdf:resource="http://ontologies.semanticarts.com/o/gistPlace7.2"/>
+</owl:Ontology>
+<!-- Generated from Sheet.459 -->
+<owl:ObjectProperty rdf:about="&gist;hasCommunicationAddress">
+	<rdfs:comment>The general class of places you can send messages including postal addresses, fax numbers, phone numbers, email, web site, etc. </rdfs:comment>
+	<owl:inverseOf rdf:resource="&gist;communicationAddressOf"/>
+	<rdfs:range rdf:resource="&gist;Address"/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="&gist;communicationAddressOf">
+</owl:ObjectProperty>
+<owl:Class rdf:about="&gist;Address"/>
+<!-- Generated from Sheet.461 -->
+<owl:ObjectProperty rdf:about="&gist;hasStreetAddress">
+	<rdfs:comment>A place that can be found on a map, has geo coordinates; you could live or work there. </rdfs:comment>
+	<owl:inverseOf rdf:resource="&gist;streetAddressOf"/>
+	<rdfs:range rdf:resource="&gist;BuildingAddress"/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="&gist;streetAddressOf">
+</owl:ObjectProperty>
+<owl:Class rdf:about="&gist;BuildingAddress"/>
+<!-- Generated from Sheet.491 -->
+<owl:Class rdf:about="&gist;PostalAddress">
+	<rdfs:comment>A set of codes the postal authorities can use to deliver mail. Could be a street address, could be a postal address, could be the route codes.</rdfs:comment>
+</owl:Class>
+<!-- Generated from Sheet.487 -->
+<owl:Class rdf:about="&gist;PostalAddress">
+	<rdfs:subClassOf rdf:resource="&gist;Address" />
+</owl:Class>
+<owl:Class rdf:about="&gist;PostalAddress">
+	<rdfs:subClassOf>
+		<owl:Restriction>
+			<owl:onProperty rdf:resource="&gist;communicationAddressOf"/>
+			<owl:someValuesFrom rdf:resource="&gist;SocialBeing"/>
+		</owl:Restriction>
+	</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:about="&gist;PostalAddress">
+	<rdfs:label>Postal Address</rdfs:label>
+</owl:Class>
+<owl:AnnotationProperty rdf:about="&rdfs;label"/>
+<owl:Class rdf:about="&gist;PostalAddress">
+	<rdfs:comment rdf:datatype="&xsd;string">EXAMPLE: a street address, a PO Box, an FPO code</rdfs:comment>
+</owl:Class>
+<owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+<!-- Generated from Sheet.487 -->
+<owl:Class rdf:about="&gist;Address">
+</owl:Class>
+<owl:ObjectProperty rdf:about="&gist;communicationAddressOf"/>
+<!-- Generated from Sheet.501 -->
+<owl:Class rdf:about="&gist;TelephoneNumber">
+	<rdfs:comment>Some phone numbers accept faxes, some allow Internet access, etc.</rdfs:comment>
+</owl:Class>
+<!-- Generated from Sheet.495 -->
+<owl:Class rdf:about="&gist;TelephoneNumber">
+	<rdfs:subClassOf rdf:resource="&gist;Address" />
+</owl:Class>
+<owl:Class rdf:about="&gist;TelephoneNumber">
+	<rdfs:label>Telephone Number</rdfs:label>
+</owl:Class>
+<owl:AnnotationProperty rdf:about="&rdfs;label"/>
+<owl:Class rdf:about="&gist;TelephoneNumber">
+	<rdfs:comment rdf:datatype="&xsd;string">EXAMPLE: cell, fax, landline</rdfs:comment>
+</owl:Class>
+<owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+<!-- Generated from Sheet.495 -->
+<owl:Class rdf:about="&gist;Address">
+</owl:Class>
+<owl:ObjectProperty rdf:about="&gist;communicationAddressOf"/>
+<!-- Generated from Sheet.509 -->
+<owl:Class rdf:about="&gist;BuildingAddress">
+	<rdfs:comment>An address that you can send mail to or that you could find in the physical world. </rdfs:comment>
+</owl:Class>
+<!-- Generated from Sheet.505 -->
+<owl:Class rdf:about="&gist;BuildingAddress">
+	<rdfs:subClassOf rdf:resource="&gist;Address" />
+</owl:Class>
+<owl:Class rdf:about="&gist;BuildingAddress">
+	<rdfs:subClassOf>
+		<owl:Restriction>
+			<owl:onProperty rdf:resource="&gist;streetAddressOf"/>
+			<owl:someValuesFrom rdf:resource="&gist;Building"/>
+		</owl:Restriction>
+	</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:about="&gist;BuildingAddress">
+	<rdfs:label>Building Address</rdfs:label>
+</owl:Class>
+<owl:AnnotationProperty rdf:about="&rdfs;label"/>
+<!-- Generated from Sheet.505 -->
+<owl:Class rdf:about="&gist;Address">
+</owl:Class>
+<owl:ObjectProperty rdf:about="&gist;streetAddressOf"/>
+<!-- Generated from Sheet.515 -->
+<owl:Class rdf:about="&gist;Address">
+	<rdfs:comment>A reference to a place (real or virtual) that can be located by some routing algorithm and where messages or things can be sent to or retrieved from. E.g. PO Box or URL to a pdf file.</rdfs:comment>
+</owl:Class>
+<!-- Generated from Sheet.511 -->
+<owl:Class rdf:about="&gist;Address">
+	<rdfs:subClassOf rdf:resource="&gist;Content" />
+</owl:Class>
+<owl:Class rdf:about="&gist;Address">
+	<rdfs:label>Address</rdfs:label>
+</owl:Class>
+<owl:AnnotationProperty rdf:about="&rdfs;label"/>
+<!-- Generated from Sheet.511 -->
+<owl:Class rdf:about="&gist;Content">
+</owl:Class>
+<!-- Generated from Sheet.523 -->
+<owl:Class rdf:about="&gist;ElectronicMessageAddress">
+	<rdfs:comment>Any place a message can be sent (email, fax, etc.).</rdfs:comment>
+</owl:Class>
+<!-- Generated from Sheet.519 -->
+<owl:Class rdf:about="&gist;ElectronicMessageAddress">
+	<rdfs:subClassOf rdf:resource="&gist;Address" />
+</owl:Class>
+<owl:Class rdf:about="&gist;ElectronicMessageAddress">
+	<rdfs:label>Electronic Message Address</rdfs:label>
+</owl:Class>
+<owl:AnnotationProperty rdf:about="&rdfs;label"/>
+<!-- Generated from Sheet.519 -->
+<owl:Class rdf:about="&gist;Address">
+</owl:Class>
+<owl:ObjectProperty rdf:about="&gist;communicationAddressOf"/>
+</rdf:RDF>

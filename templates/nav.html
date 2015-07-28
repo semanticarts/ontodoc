@@ -1,0 +1,32 @@
+<nav class="col-md-4">
+	<h1>{{ page_data.metadata.site_title }}</h1>
+	<p>{{ page_data.metadata.site_description }}</p>
+
+	<h5>Classes</h5>
+	<ul>
+	{% for uri, obj in page_data.ontology.classes.iteritems()|sort %}
+		<li><a href="{{ uri|to_link }}">{{ uri|to_qname }}</a></li>
+	{% endfor %}
+	</ul>
+
+	<h5>Object Properties</h5>
+	<ul>
+	{% for uri, obj in page_data.ontology.objectProperties.iteritems()|sort %}
+		<li><a href="{{ uri|to_link }}">{{ uri|to_qname }}</a></li>
+	{% endfor %}
+	</ul>
+
+	<h5>Datatype Properties</h5>
+	<ul>
+	{% for uri, obj in page_data.ontology.datatypeProperties.iteritems()|sort %}
+		<li><a href="{{ uri|to_link }}">{{ uri|to_qname }}</a></li>
+	{% endfor %}
+	</ul>
+
+	<h5>Instances</h5>
+	<ul>
+	{% for uri, obj in page_data.ontology.instances.iteritems()|sort %}
+		<li><a href="{{ uri|to_link }}">{{ uri|to_qname }}</a></li>
+	{% endfor %}
+	</ul>
+</nav>

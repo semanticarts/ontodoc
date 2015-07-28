@@ -1,0 +1,7 @@
+namespace: "http://ontologies.semanticarts.com/gist"
+prefix: "gist"
+separator: ":"
+site_info:
+    site_title: "Gist 7.2 Docs"
+    site_description: "Gist is designed to have the maximum coverage of typical business ontology concepts with the fewest number of primitives and the least amount of ambiguity."
+    base_url: "/"

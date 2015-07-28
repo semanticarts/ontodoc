@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+<!ENTITY gist "http://ontologies.semanticarts.com/gist#">]>
+<rdf:RDF xml:base="http://ontologies.semanticarts.com/o/gistTime" xmlns:owl="&owl;" xmlns:rdf="&rdf;" xmlns:rdfs="&rdfs;"  xmlns:gist="&gist;">
+<!-- Generated from Sheet.652 -->
+<owl:Ontology rdf:about="http://ontologies.semanticarts.com/o/gistTime">
+	<rdfs:comment>gistTime</rdfs:comment>
+	<rdfs:comment>gist7.2 time</rdfs:comment>
+	<owl:versionIRI rdf:resource="http://ontologies.semanticarts.com/o/gistTime7.2"/>
+	<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Created with e6Tools Graphical OWL Editor from S:\_SemanticArts\Offerings\gist\__internallyReleasedGists\_gist7.2 May 2015\gist7.2a.vsd Page:time</owl:versionInfo>
+	<owl:imports rdf:resource="http://ontologies.semanticarts.com/o/gistMagnitude7.2"/>
+</owl:Ontology>
+<!-- Generated from Sheet.596 -->
+<owl:DatatypeProperty rdf:about="&gist;localDate">
+	<rdfs:domain rdf:resource="&gist;TimeInstant"/>
+</owl:DatatypeProperty>
+<owl:Class rdf:about="&gist;TimeInstant"/>
+<!-- Generated from Sheet.598 -->
+<owl:DatatypeProperty rdf:about="&gist;universalDate">
+	<rdfs:domain rdf:resource="&gist;TimeInstant"/>
+</owl:DatatypeProperty>
+<owl:Class rdf:about="&gist;TimeInstant"/>
+<!-- Generated from Sheet.600 -->
+<owl:DatatypeProperty rdf:about="&gist;date">
+	<rdfs:domain rdf:resource="&gist;TimeInstant"/>
+</owl:DatatypeProperty>
+<owl:Class rdf:about="&gist;TimeInstant"/>
+<!-- Generated from Sheet.602 -->
+<owl:DatatypeProperty rdf:about="&gist;localTime">
+	<rdfs:domain rdf:resource="&gist;TimeInstant"/>
+</owl:DatatypeProperty>
+<owl:Class rdf:about="&gist;TimeInstant"/>
+<!-- Generated from Sheet.604 -->
+<owl:DatatypeProperty rdf:about="&gist;universalTime">
+	<rdfs:domain rdf:resource="&gist;TimeInstant"/>
+</owl:DatatypeProperty>
+<owl:Class rdf:about="&gist;TimeInstant"/>
+<!-- Generated from Sheet.606 -->
+<owl:DatatypeProperty rdf:about="&gist;time">
+	<rdfs:domain rdf:resource="&gist;TimeInstant"/>
+</owl:DatatypeProperty>
+<owl:Class rdf:about="&gist;TimeInstant"/>
+<!-- Generated from Sheet.608 -->
+<owl:DatatypeProperty rdf:about="&gist;localDateTime">
+	<rdfs:domain rdf:resource="&gist;TimeInstant"/>
+	<rdfs:range rdf:resource="&xsd;dateTime"/>
+</owl:DatatypeProperty>
+<owl:Class rdf:about="&gist;TimeInstant"/>
+<!-- Generated from Sheet.610 -->
+<owl:DatatypeProperty rdf:about="&gist;universalDateTime">
+	<rdfs:domain rdf:resource="&gist;TimeInstant"/>
+	<rdfs:range rdf:resource="&xsd;dateTime"/>
+</owl:DatatypeProperty>
+<owl:Class rdf:about="&gist;TimeInstant"/>
+<!-- Generated from Sheet.612 -->
+<owl:DatatypeProperty rdf:about="&gist;dateTime">
+	<rdfs:domain rdf:resource="&gist;TimeInstant"/>
+	<rdfs:range rdf:resource="&xsd;dateTime"/>
+</owl:DatatypeProperty>
+<owl:Class rdf:about="&gist;TimeInstant"/>
+<!-- Generated from Sheet.614 -->
+<owl:ObjectProperty rdf:about="&gist;timeZoneStandardUsed">
+	<rdfs:comment>the "timezone" with Daylight savings adjust</rdfs:comment>
+	<rdfs:domain rdf:resource="&gist;TimeInstant"/>
+	<rdfs:range rdf:resource="&gist;TimeZoneStandard"/>
+</owl:ObjectProperty>
+<owl:Class rdf:about="&gist;TimeInstant"/>
+<owl:Class rdf:about="&gist;TimeZoneStandard"/>
+<!-- Generated from Sheet.616 -->
+<owl:ObjectProperty rdf:about="&gist;end">
+	<rdfs:domain>
+		<owl:Class>
+			<owl:unionOf rdf:parseType="Collection">
+				<owl:Class rdf:about="&gist;TimeInterval" />
+				<owl:Class rdf:about="&gist;Intention" />
+			</owl:unionOf>
+		</owl:Class>
+	</rdfs:domain>
+	<rdfs:range rdf:resource="&gist;TimeInstant"/>
+</owl:ObjectProperty>
+<owl:Class rdf:about="&gist;TimeInstant"/>
+<!-- Generated from Sheet.731 -->
+<owl:Class rdf:about="&gist;TimeInterval">
+</owl:Class>
+<!-- Generated from Sheet.733 -->
+<owl:Class rdf:about="&gist;Intention">
+</owl:Class>
+<!-- Generated from Sheet.618 -->
+<owl:ObjectProperty rdf:about="&gist;start">
+	<rdfs:domain>
+		<owl:Class>
+			<owl:unionOf rdf:parseType="Collection">
+				<owl:Class rdf:about="&gist;TimeInterval" />
+				<owl:Class rdf:about="&gist;Intention" />
+			</owl:unionOf>
+		</owl:Class>
+	</rdfs:domain>
+	<rdfs:range rdf:resource="&gist;TimeInstant"/>
+</owl:ObjectProperty>
+<owl:Class rdf:about="&gist;TimeInstant"/>
+<!-- Generated from Sheet.723 -->
+<owl:Class rdf:about="&gist;TimeInterval">
+</owl:Class>
+<!-- Generated from Sheet.725 -->
+<owl:Class rdf:about="&gist;Intention">
+</owl:Class>
+<!-- Generated from Sheet.642 -->
+<owl:Class rdf:about="&gist;TimeZoneStandard">
+	<owl:intersectionOf rdf:parseType="Collection">
+		<owl:Class rdf:about="&gist;Specification" />
+		<owl:Restriction>
+			<owl:onProperty rdf:resource="&gist;basedOn"/>
+			<owl:someValuesFrom rdf:resource="&gist;TimeZone"/>
+		</owl:Restriction>
+	</owl:intersectionOf>
+</owl:Class>
+<owl:Class rdf:about="&gist;TimeZoneStandard">
+	<rdfs:label>Time Zone Standard</rdfs:label>
+</owl:Class>
+<owl:AnnotationProperty rdf:about="&rdfs;label"/>
+<!-- Generated from Sheet.638 -->
+<owl:Class rdf:about="&gist;Specification">
+</owl:Class>
+<owl:ObjectProperty rdf:about="&gist;basedOn"/>
+<!-- Generated from Sheet.655 -->
+<owl:Class rdf:about="&gist;TimeInterval">
+</owl:Class>
+<!-- Generated from Sheet.681 -->
+<owl:Class rdf:about="&gist;TimeInstant">
+	<rdfs:comment>A point on a time line. Could be a literal instant (as in 12:01.0001 January 1, 2008), or a broader but still single point in time (January 1, 2008). Time and dates are in xsd: DateTime format in Universal Time. Our identity criteria require that something has (refers to) this instance.  We are declaring a time instant to be an interval with no duration (or really a duration only equal to its precision)</rdfs:comment>
+</owl:Class>
+<owl:Class rdf:about="&gist;TimeInstant">
+	<rdfs:subClassOf>
+		<owl:Restriction>
+			<owl:onProperty rdf:resource="&gist;hasPrecision"/>
+			<owl:someValuesFrom rdf:resource="&gist;Duration"/>
+		</owl:Restriction>
+	</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:about="&gist;TimeInstant">
+	<rdfs:subClassOf>
+		<owl:Restriction>
+			<owl:onProperty rdf:resource="&gist;universalDateTime"/>
+			<owl:someValuesFrom rdf:resource="&xsd;dateTime"/>
+		</owl:Restriction>
+	</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:about="&gist;TimeInstant">
+	<rdfs:subClassOf>
+		<owl:Restriction>
+			<owl:onProperty rdf:resource="&gist;universalDate"/>
+			<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+		</owl:Restriction>
+	</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:about="&gist;TimeInstant">
+	<rdfs:subClassOf>
+		<owl:Restriction>
+			<owl:onProperty rdf:resource="&gist;universalTime"/>
+			<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+		</owl:Restriction>
+	</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:about="&gist;TimeInstant">
+	<rdfs:subClassOf>
+		<owl:Restriction>
+			<owl:onProperty rdf:resource="&gist;timeZoneStandardUsed"/>
+			<owl:hasValue rdf:resource="&gist;_greenwichTimeZone" />
+		</owl:Restriction>
+	</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:about="&gist;TimeInstant">
+	<rdfs:subClassOf>
+		<owl:Restriction>
+			<owl:onProperty rdf:resource="&gist;of"/>
+			<owl:someValuesFrom rdf:resource="&owl;Thing"/>
+		</owl:Restriction>
+	</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:about="&gist;TimeInstant">
+	<rdfs:label>Time Instant</rdfs:label>
+</owl:Class>
+<owl:AnnotationProperty rdf:about="&rdfs;label"/>
+<owl:Class rdf:about="&gist;TimeInstant">
+	<rdfs:comment rdf:datatype="&xsd;string">EXAMPLE: 12:01.0001 April8, 2012 or March 8, 1955</rdfs:comment>
+</owl:Class>
+<owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+<owl:ObjectProperty rdf:about="&gist;hasPrecision"/>
+<owl:DatatypeProperty rdf:about="&gist;universalDateTime"/>
+<owl:DatatypeProperty rdf:about="&gist;universalDate"/>
+<owl:DatatypeProperty rdf:about="&gist;universalTime"/>
+<owl:ObjectProperty rdf:about="&gist;timeZoneStandardUsed"/>
+<owl:Thing rdf:about="&gist;_greenwichTimeZone"/>
+<owl:ObjectProperty rdf:about="&gist;of"/>
+<!-- Generated from Sheet.699 -->
+<owl:Class rdf:about="&gist;TimeInterval">
+	<rdfs:comment>A specific interval on a time line with start and end TimeInstants and a Duration.</rdfs:comment>
+</owl:Class>
+<owl:Class rdf:about="&gist;TimeInterval">
+	<rdfs:subClassOf>
+		<owl:Restriction>
+			<owl:onProperty rdf:resource="&gist;start"/>
+			<owl:someValuesFrom rdf:resource="&gist;TimeInstant"/>
+		</owl:Restriction>
+	</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:about="&gist;TimeInterval">
+	<rdfs:subClassOf>
+		<owl:Restriction>
+			<owl:onProperty rdf:resource="&gist;end"/>
+			<owl:someValuesFrom rdf:resource="&gist;TimeInstant"/>
+		</owl:Restriction>
+	</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:about="&gist;TimeInterval">
+	<rdfs:subClassOf>
+		<owl:Restriction>
+			<owl:onProperty rdf:resource="&gist;hasMagnitude"/>
+			<owl:someValuesFrom rdf:resource="&gist;Duration"/>
+		</owl:Restriction>
+	</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:about="&gist;TimeInterval">
+	<rdfs:label>Time Interval</rdfs:label>
+</owl:Class>
+<owl:AnnotationProperty rdf:about="&rdfs;label"/>
+<owl:Class rdf:about="&gist;TimeInterval">
+	<rdfs:comment rdf:datatype="&xsd;string">EXAMPLE: Jan1 through Jan8, 2013</rdfs:comment>
+</owl:Class>
+<owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+<owl:Class rdf:about="&gist;TimeInterval">
+	<rdfs:comment rdf:datatype="&xsd;string">EXAMPLE: Jan1 through Jan8, 2013</rdfs:comment>
+</owl:Class>
+<owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+<owl:Class rdf:about="&gist;TimeInterval">
+	<rdfs:comment rdf:datatype="&xsd;string">NOTE: has a Duration, but is not a Duration.</rdfs:comment>
+</owl:Class>
+<owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+<owl:Class rdf:about="&gist;TimeInterval">
+	<rdfs:comment rdf:datatype="&xsd;string">NOTE: end should be later than start, but this is not enforced</rdfs:comment>
+</owl:Class>
+<owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+<owl:ObjectProperty rdf:about="&gist;start"/>
+<owl:ObjectProperty rdf:about="&gist;end"/>
+<owl:ObjectProperty rdf:about="&gist;hasMagnitude"/>
+<!-- Generated from Sheet.715 -->
+<owl:Class rdf:about="&gist;LocalInstant">
+	<rdfs:comment>A point in time expressed relative to a local time zone. Can be converted to Universal Time using the time zone offset. The precision is used to state how precise this instant is.  Typical values would be day, hour, miinute or second</rdfs:comment>
+	<owl:intersectionOf rdf:parseType="Collection">
+		<owl:Class rdf:about="&gist;TimeInstant" />
+		<owl:Restriction>
+			<owl:onProperty rdf:resource="&gist;timeZoneStandardUsed"/>
+			<owl:someValuesFrom rdf:resource="&gist;TimeZoneStandard"/>
+		</owl:Restriction>
+		<owl:Restriction>
+			<owl:onProperty rdf:resource="&gist;sameTimeAs"/>
+			<owl:someValuesFrom rdf:resource="&gist;TimeInstant"/>
+		</owl:Restriction>
+		<owl:Restriction>
+			<owl:onProperty rdf:resource="&gist;localDateTime"/>
+			<owl:someValuesFrom rdf:resource="&xsd;dateTime"/>
+		</owl:Restriction>
+		<owl:Restriction>
+			<owl:onProperty rdf:resource="&gist;localDate"/>
+			<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+		</owl:Restriction>
+		<owl:Restriction>
+			<owl:onProperty rdf:resource="&gist;localTime"/>
+			<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+		</owl:Restriction>
+	</owl:intersectionOf>
+</owl:Class>
+<owl:Class rdf:about="&gist;LocalInstant">
+	<rdfs:label>Local Instant</rdfs:label>
+</owl:Class>
+<owl:AnnotationProperty rdf:about="&rdfs;label"/>
+<owl:ObjectProperty rdf:about="&gist;timeZoneStandardUsed"/>
+<owl:ObjectProperty rdf:about="&gist;sameTimeAs"/>
+<owl:DatatypeProperty rdf:about="&gist;localDateTime"/>
+<owl:DatatypeProperty rdf:about="&gist;localDate"/>
+<owl:DatatypeProperty rdf:about="&gist;localTime"/>
+<!-- Generated from Sheet.701 -->
+<owl:Class rdf:about="&gist;TimeInstant">
+</owl:Class>
+<!-- Generated from Sheet.663 -->
+<gist:TimeZoneStandard rdf:about="&gist;_greenwichTimeZone"/>
+<owl:Class rdf:about="&gist;TimeZoneStandard"/>
+<!-- Generated from Sheet.654 -->
+<owl:Class rdf:about="&gist;TimeInstant">
+	<rdfs:subClassOf rdf:resource="&gist;TimeInterval" />
+</owl:Class>
+<owl:Class rdf:about="&gist;TimeInterval"/>
+<!-- Generated from Sheet.657 -->
+<owl:DatatypeProperty rdf:about="&gist;localDate">
+	<rdfs:subPropertyOf rdf:resource="&gist;date" />
+</owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="&gist;date"/>
+<!-- Generated from Sheet.658 -->
+<owl:DatatypeProperty rdf:about="&gist;universalDate">
+	<rdfs:subPropertyOf rdf:resource="&gist;date" />
+</owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="&gist;date"/>
+<!-- Generated from Sheet.659 -->
+<owl:DatatypeProperty rdf:about="&gist;localTime">
+	<rdfs:subPropertyOf rdf:resource="&gist;time" />
+</owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="&gist;time"/>
+<!-- Generated from Sheet.660 -->
+<owl:DatatypeProperty rdf:about="&gist;universalTime">
+	<rdfs:subPropertyOf rdf:resource="&gist;time" />
+</owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="&gist;time"/>
+<!-- Generated from Sheet.661 -->
+<owl:DatatypeProperty rdf:about="&gist;localDateTime">
+	<rdfs:subPropertyOf rdf:resource="&gist;dateTime" />
+</owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="&gist;dateTime"/>
+<!-- Generated from Sheet.662 -->
+<owl:DatatypeProperty rdf:about="&gist;universalDateTime">
+	<rdfs:subPropertyOf rdf:resource="&gist;dateTime" />
+</owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="&gist;dateTime"/>
+</rdf:RDF>
