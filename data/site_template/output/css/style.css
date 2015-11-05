@@ -1,0 +1,11 @@
+nav ul { margin-left: 0; padding-left: 0; list-style: none; }
+
+.doc-section {
+	margin: 15px 0;
+	padding: 15px 0;
+	border-top: 1px solid #ccc;
+}
+
+footer { margin: 50px 0; }
+
+.main h2 { margin-top: 30px; padding-top: 30px; border-top: 2px solid #222; }

@@ -1,0 +1,7 @@
+[console_scripts]
+ontodoc = onntodoc.main:main
+
+[ontodoc]
+new = ontodoc.create:Create
+ontodoc = ginger.build:compile
+

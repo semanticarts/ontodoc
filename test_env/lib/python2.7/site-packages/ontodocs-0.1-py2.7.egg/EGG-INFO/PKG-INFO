@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: ontodocs
+Version: 0.1
+Summary: Generate static ontology documentation from OWL files
+Home-page: UNKNOWN
+Author: Scott Ogle
+Author-email: scott@semanticarts.com
+License: UNKNOWN
+Description: ## ontodoc
+        
+        ontodoc generates static documentation for OWL ontologies using both rdfs:comments and features of the ontology (class hierarchy relationships, property types, etc).
+        
+        For a working example, see the [gist documentation](http://semanticarts.com/gist-docs).
+        
+Platform: Any
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Console

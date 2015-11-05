@@ -1,0 +1,3938 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ontodoc Example</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="container">
+			<nav class="col-md-4">
+	<h1>Ontodoc Example</h1>
+	<p>Ontodoc is an ontology documenation generator that thakes an ontology (expressed in OWL, RDF, etc) and generates readable documentation covering classes, properties and named instances. Descriptions of terms are created from rdfs:comments.</p>
+
+	<h5>Classes</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Class">http://www.w3.org/2000/01/rdf-schema#Class</a></li>
+	
+		<li><a href="http://www.w3.org/2000/10/swap/pim/contact#Person">http://www.w3.org/2000/10/swap/pim/contact#Person</a></li>
+	
+		<li><a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</a></li>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+		<li><a href="#Document">foaf:Document</a></li>
+	
+		<li><a href="#Group">foaf:Group</a></li>
+	
+		<li><a href="#Image">foaf:Image</a></li>
+	
+		<li><a href="#LabelProperty">foaf:LabelProperty</a></li>
+	
+		<li><a href="#OnlineAccount">foaf:OnlineAccount</a></li>
+	
+		<li><a href="#OnlineChatAccount">foaf:OnlineChatAccount</a></li>
+	
+		<li><a href="#OnlineEcommerceAccount">foaf:OnlineEcommerceAccount</a></li>
+	
+		<li><a href="#OnlineGamingAccount">foaf:OnlineGamingAccount</a></li>
+	
+		<li><a href="#Organization">foaf:Organization</a></li>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+		<li><a href="#PersonalProfileDocument">foaf:PersonalProfileDocument</a></li>
+	
+		<li><a href="#Project">foaf:Project</a></li>
+	
+	</ul>
+
+	<h5>Object Properties</h5>
+	<ul>
+	
+		<li><a href="#account">foaf:account</a></li>
+	
+		<li><a href="#accountServiceHomepage">foaf:accountServiceHomepage</a></li>
+	
+		<li><a href="#based_near">foaf:based_near</a></li>
+	
+		<li><a href="#currentProject">foaf:currentProject</a></li>
+	
+		<li><a href="#depiction">foaf:depiction</a></li>
+	
+		<li><a href="#depicts">foaf:depicts</a></li>
+	
+		<li><a href="#fundedBy">foaf:fundedBy</a></li>
+	
+		<li><a href="#holdsAccount">foaf:holdsAccount</a></li>
+	
+		<li><a href="#homepage">foaf:homepage</a></li>
+	
+		<li><a href="#img">foaf:img</a></li>
+	
+		<li><a href="#interest">foaf:interest</a></li>
+	
+		<li><a href="#knows">foaf:knows</a></li>
+	
+		<li><a href="#logo">foaf:logo</a></li>
+	
+		<li><a href="#made">foaf:made</a></li>
+	
+		<li><a href="#maker">foaf:maker</a></li>
+	
+		<li><a href="#mbox">foaf:mbox</a></li>
+	
+		<li><a href="#member">foaf:member</a></li>
+	
+		<li><a href="#openid">foaf:openid</a></li>
+	
+		<li><a href="#page">foaf:page</a></li>
+	
+		<li><a href="#pastProject">foaf:pastProject</a></li>
+	
+		<li><a href="#phone">foaf:phone</a></li>
+	
+		<li><a href="#primaryTopic">foaf:primaryTopic</a></li>
+	
+		<li><a href="#publications">foaf:publications</a></li>
+	
+		<li><a href="#schoolHomepage">foaf:schoolHomepage</a></li>
+	
+		<li><a href="#theme">foaf:theme</a></li>
+	
+		<li><a href="#thumbnail">foaf:thumbnail</a></li>
+	
+		<li><a href="#tipjar">foaf:tipjar</a></li>
+	
+		<li><a href="#topic">foaf:topic</a></li>
+	
+		<li><a href="#topic_interest">foaf:topic_interest</a></li>
+	
+		<li><a href="#weblog">foaf:weblog</a></li>
+	
+		<li><a href="#workInfoHomepage">foaf:workInfoHomepage</a></li>
+	
+		<li><a href="#workplaceHomepage">foaf:workplaceHomepage</a></li>
+	
+	</ul>
+
+	<h5>Datatype Properties</h5>
+	<ul>
+	
+		<li><a href="#accountName">foaf:accountName</a></li>
+	
+		<li><a href="#age">foaf:age</a></li>
+	
+		<li><a href="#aimChatID">foaf:aimChatID</a></li>
+	
+		<li><a href="#birthday">foaf:birthday</a></li>
+	
+		<li><a href="#dnaChecksum">foaf:dnaChecksum</a></li>
+	
+		<li><a href="#familyName">foaf:familyName</a></li>
+	
+		<li><a href="#family_name">foaf:family_name</a></li>
+	
+		<li><a href="#firstName">foaf:firstName</a></li>
+	
+		<li><a href="#geekcode">foaf:geekcode</a></li>
+	
+		<li><a href="#gender">foaf:gender</a></li>
+	
+		<li><a href="#givenName">foaf:givenName</a></li>
+	
+		<li><a href="#givenname">foaf:givenname</a></li>
+	
+		<li><a href="#icqChatID">foaf:icqChatID</a></li>
+	
+		<li><a href="#jabberID">foaf:jabberID</a></li>
+	
+		<li><a href="#lastName">foaf:lastName</a></li>
+	
+		<li><a href="#mbox_sha1sum">foaf:mbox_sha1sum</a></li>
+	
+		<li><a href="#msnChatID">foaf:msnChatID</a></li>
+	
+		<li><a href="#myersBriggs">foaf:myersBriggs</a></li>
+	
+		<li><a href="#name">foaf:name</a></li>
+	
+		<li><a href="#nick">foaf:nick</a></li>
+	
+		<li><a href="#plan">foaf:plan</a></li>
+	
+		<li><a href="#sha1">foaf:sha1</a></li>
+	
+		<li><a href="#skypeID">foaf:skypeID</a></li>
+	
+		<li><a href="#status">foaf:status</a></li>
+	
+		<li><a href="#surname">foaf:surname</a></li>
+	
+		<li><a href="#title">foaf:title</a></li>
+	
+		<li><a href="#yahooChatID">foaf:yahooChatID</a></li>
+	
+	</ul>
+
+	<!-- <h5>Instances</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+		<li><a href="#Document">foaf:Document</a></li>
+	
+		<li><a href="#Group">foaf:Group</a></li>
+	
+		<li><a href="#Image">foaf:Image</a></li>
+	
+		<li><a href="#LabelProperty">foaf:LabelProperty</a></li>
+	
+		<li><a href="#OnlineAccount">foaf:OnlineAccount</a></li>
+	
+		<li><a href="#OnlineChatAccount">foaf:OnlineChatAccount</a></li>
+	
+		<li><a href="#OnlineEcommerceAccount">foaf:OnlineEcommerceAccount</a></li>
+	
+		<li><a href="#OnlineGamingAccount">foaf:OnlineGamingAccount</a></li>
+	
+		<li><a href="#Organization">foaf:Organization</a></li>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+		<li><a href="#PersonalProfileDocument">foaf:PersonalProfileDocument</a></li>
+	
+		<li><a href="#Project">foaf:Project</a></li>
+	
+		<li><a href="#account">foaf:account</a></li>
+	
+		<li><a href="#accountName">foaf:accountName</a></li>
+	
+		<li><a href="#accountServiceHomepage">foaf:accountServiceHomepage</a></li>
+	
+		<li><a href="#age">foaf:age</a></li>
+	
+		<li><a href="#aimChatID">foaf:aimChatID</a></li>
+	
+		<li><a href="#based_near">foaf:based_near</a></li>
+	
+		<li><a href="#birthday">foaf:birthday</a></li>
+	
+		<li><a href="#currentProject">foaf:currentProject</a></li>
+	
+		<li><a href="#depiction">foaf:depiction</a></li>
+	
+		<li><a href="#depicts">foaf:depicts</a></li>
+	
+		<li><a href="#dnaChecksum">foaf:dnaChecksum</a></li>
+	
+		<li><a href="#familyName">foaf:familyName</a></li>
+	
+		<li><a href="#family_name">foaf:family_name</a></li>
+	
+		<li><a href="#firstName">foaf:firstName</a></li>
+	
+		<li><a href="#fundedBy">foaf:fundedBy</a></li>
+	
+		<li><a href="#geekcode">foaf:geekcode</a></li>
+	
+		<li><a href="#gender">foaf:gender</a></li>
+	
+		<li><a href="#givenName">foaf:givenName</a></li>
+	
+		<li><a href="#givenname">foaf:givenname</a></li>
+	
+		<li><a href="#holdsAccount">foaf:holdsAccount</a></li>
+	
+		<li><a href="#homepage">foaf:homepage</a></li>
+	
+		<li><a href="#icqChatID">foaf:icqChatID</a></li>
+	
+		<li><a href="#img">foaf:img</a></li>
+	
+		<li><a href="#interest">foaf:interest</a></li>
+	
+		<li><a href="#isPrimaryTopicOf">foaf:isPrimaryTopicOf</a></li>
+	
+		<li><a href="#jabberID">foaf:jabberID</a></li>
+	
+		<li><a href="#knows">foaf:knows</a></li>
+	
+		<li><a href="#lastName">foaf:lastName</a></li>
+	
+		<li><a href="#logo">foaf:logo</a></li>
+	
+		<li><a href="#made">foaf:made</a></li>
+	
+		<li><a href="#maker">foaf:maker</a></li>
+	
+		<li><a href="#mbox">foaf:mbox</a></li>
+	
+		<li><a href="#mbox_sha1sum">foaf:mbox_sha1sum</a></li>
+	
+		<li><a href="#member">foaf:member</a></li>
+	
+		<li><a href="#membershipClass">foaf:membershipClass</a></li>
+	
+		<li><a href="#msnChatID">foaf:msnChatID</a></li>
+	
+		<li><a href="#myersBriggs">foaf:myersBriggs</a></li>
+	
+		<li><a href="#name">foaf:name</a></li>
+	
+		<li><a href="#nick">foaf:nick</a></li>
+	
+		<li><a href="#openid">foaf:openid</a></li>
+	
+		<li><a href="#page">foaf:page</a></li>
+	
+		<li><a href="#pastProject">foaf:pastProject</a></li>
+	
+		<li><a href="#phone">foaf:phone</a></li>
+	
+		<li><a href="#plan">foaf:plan</a></li>
+	
+		<li><a href="#primaryTopic">foaf:primaryTopic</a></li>
+	
+		<li><a href="#publications">foaf:publications</a></li>
+	
+		<li><a href="#schoolHomepage">foaf:schoolHomepage</a></li>
+	
+		<li><a href="#sha1">foaf:sha1</a></li>
+	
+		<li><a href="#skypeID">foaf:skypeID</a></li>
+	
+		<li><a href="#status">foaf:status</a></li>
+	
+		<li><a href="#surname">foaf:surname</a></li>
+	
+		<li><a href="#theme">foaf:theme</a></li>
+	
+		<li><a href="#thumbnail">foaf:thumbnail</a></li>
+	
+		<li><a href="#tipjar">foaf:tipjar</a></li>
+	
+		<li><a href="#title">foaf:title</a></li>
+	
+		<li><a href="#topic">foaf:topic</a></li>
+	
+		<li><a href="#topic_interest">foaf:topic_interest</a></li>
+	
+		<li><a href="#weblog">foaf:weblog</a></li>
+	
+		<li><a href="#workInfoHomepage">foaf:workInfoHomepage</a></li>
+	
+		<li><a href="#workplaceHomepage">foaf:workplaceHomepage</a></li>
+	
+		<li><a href="#yahooChatID">foaf:yahooChatID</a></li>
+	
+	</ul> -->
+</nav>
+			
+			<div class="col-md-8 main">
+				<h2>Classes</h2>
+
+				
+					<a id="Class"></a>
+<div class="doc-section owl-class">
+	<h4><a href="http://www.w3.org/2000/01/rdf-schema#Class">http://www.w3.org/2000/01/rdf-schema#Class</a></h4>
+	
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+</div>
+				
+					<a id="Person"></a>
+<div class="doc-section owl-class">
+	<h4><a href="http://www.w3.org/2000/10/swap/pim/contact#Person">http://www.w3.org/2000/10/swap/pim/contact#Person</a></h4>
+	
+	
+	
+	
+	<h5>Subclasses</h5>
+	<ul>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+	</ul>
+	
+
+	
+	
+	
+
+	
+	
+	
+	<h5>Disjoints</h5>
+	<ul>
+	
+	</ul>
+	
+</div>
+				
+					<a id="SpatialThing"></a>
+<div class="doc-section owl-class">
+	<h4><a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</a></h4>
+	
+	
+	
+	
+	<h5>Subclasses</h5>
+	<ul>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+	</ul>
+	
+
+	
+	
+	
+
+	
+	
+	
+	<h5>Disjoints</h5>
+	<ul>
+	
+	</ul>
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-class">
+	<h4><a href="#Agent">foaf:Agent</a></h4>
+	
+	
+	
+		<p>An agent (eg. person, group, software or physical artifact).</p>
+	
+	
+	
+	
+	<h5>Subclasses</h5>
+	<ul>
+	
+		<li><a href="#Organization">foaf:Organization</a></li>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+		<li><a href="#Group">foaf:Group</a></li>
+	
+	</ul>
+	
+
+	
+	
+	
+
+	
+	
+	
+	<h5>Disjoints</h5>
+	<ul>
+	
+		<li><a href="#Document">foaf:Document</a></li>
+	
+	</ul>
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-class">
+	<h4><a href="#Document">foaf:Document</a></h4>
+	
+	
+	
+		<p>A document.</p>
+	
+	
+	
+	
+	<h5>Subclasses</h5>
+	<ul>
+	
+		<li><a href="#PersonalProfileDocument">foaf:PersonalProfileDocument</a></li>
+	
+	</ul>
+	
+
+	
+	
+	
+
+	
+	
+	
+	<h5>Disjoints</h5>
+	<ul>
+	
+		<li><a href="#Organization">foaf:Organization</a></li>
+	
+		<li><a href="#Project">foaf:Project</a></li>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+	</ul>
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-class">
+	<h4><a href="#Group">foaf:Group</a></h4>
+	
+	
+	
+		<p>A class of Agents.</p>
+	
+	
+	
+	
+
+	
+	<h5>Superclasses</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+	</ul>
+	
+	
+	
+
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-class">
+	<h4><a href="#Image">foaf:Image</a></h4>
+	
+	
+	
+		<p>An image.</p>
+	
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-class">
+	<h4><a href="#LabelProperty">foaf:LabelProperty</a></h4>
+	
+	
+	
+		<p>A foaf:LabelProperty is any RDF property with texual values that serve as labels.</p>
+	
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-class">
+	<h4><a href="#OnlineAccount">foaf:OnlineAccount</a></h4>
+	
+	
+	
+		<p>An online account.</p>
+	
+	
+	
+	
+	<h5>Subclasses</h5>
+	<ul>
+	
+		<li><a href="#OnlineChatAccount">foaf:OnlineChatAccount</a></li>
+	
+		<li><a href="#OnlineEcommerceAccount">foaf:OnlineEcommerceAccount</a></li>
+	
+		<li><a href="#OnlineGamingAccount">foaf:OnlineGamingAccount</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Superclasses</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+	</ul>
+	
+	
+	
+
+	
+	
+	
+	<h5>Disjoints</h5>
+	<ul>
+	
+	</ul>
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-class">
+	<h4><a href="#OnlineChatAccount">foaf:OnlineChatAccount</a></h4>
+	
+	
+	
+		<p>An online chat account.</p>
+	
+	
+	
+	
+
+	
+	<h5>Superclasses</h5>
+	<ul>
+	
+		<li><a href="#OnlineAccount">foaf:OnlineAccount</a></li>
+	
+	</ul>
+	
+	
+	
+
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-class">
+	<h4><a href="#OnlineEcommerceAccount">foaf:OnlineEcommerceAccount</a></h4>
+	
+	
+	
+		<p>An online e-commerce account.</p>
+	
+	
+	
+	
+
+	
+	<h5>Superclasses</h5>
+	<ul>
+	
+		<li><a href="#OnlineAccount">foaf:OnlineAccount</a></li>
+	
+	</ul>
+	
+	
+	
+
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-class">
+	<h4><a href="#OnlineGamingAccount">foaf:OnlineGamingAccount</a></h4>
+	
+	
+	
+		<p>An online gaming account.</p>
+	
+	
+	
+	
+
+	
+	<h5>Superclasses</h5>
+	<ul>
+	
+		<li><a href="#OnlineAccount">foaf:OnlineAccount</a></li>
+	
+	</ul>
+	
+	
+	
+
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-class">
+	<h4><a href="#Organization">foaf:Organization</a></h4>
+	
+	
+	
+		<p>An organization.</p>
+	
+	
+	
+	
+
+	
+	<h5>Superclasses</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+	</ul>
+	
+	
+	
+
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-class">
+	<h4><a href="#Person">foaf:Person</a></h4>
+	
+	
+	
+		<p>A person.</p>
+	
+	
+	
+	
+
+	
+	<h5>Superclasses</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</a></li>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+		<li><a href="http://www.w3.org/2000/10/swap/pim/contact#Person">http://www.w3.org/2000/10/swap/pim/contact#Person</a></li>
+	
+	</ul>
+	
+	
+	
+
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-class">
+	<h4><a href="#PersonalProfileDocument">foaf:PersonalProfileDocument</a></h4>
+	
+	
+	
+		<p>A personal profile RDF document.</p>
+	
+	
+	
+	
+
+	
+	<h5>Superclasses</h5>
+	<ul>
+	
+		<li><a href="#Document">foaf:Document</a></li>
+	
+	</ul>
+	
+	
+	
+
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-class">
+	<h4><a href="#Project">foaf:Project</a></h4>
+	
+	
+	
+		<p>A project (a collective endeavour of some kind).</p>
+	
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+</div>
+				
+				
+				
+				<h2>Object Properties</h2>
+
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#account">foaf:account</a></h4>
+	
+	
+	
+		<p>Indicates an account held by this agent.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="#OnlineAccount">foaf:OnlineAccount</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#accountServiceHomepage">foaf:accountServiceHomepage</a></h4>
+	
+	
+	
+		<p>Indicates a homepage of the service provide for this online account.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#OnlineAccount">foaf:OnlineAccount</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="#Document">foaf:Document</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#based_near">foaf:based_near</a></h4>
+	
+	
+	
+		<p>A location that something is based near, for some broadly human notion of near.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#currentProject">foaf:currentProject</a></h4>
+	
+	
+	
+		<p>A current project this person works on.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#depiction">foaf:depiction</a></h4>
+	
+	
+	
+		<p>A depiction of some thing.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="#Image">foaf:Image</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Inverse</h5>
+	<ul>
+	
+		<li><a href="#depicts">foaf:depicts</a></li>
+	
+	</ul>
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#depicts">foaf:depicts</a></h4>
+	
+	
+	
+		<p>A thing depicted in this representation.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Image">foaf:Image</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Inverse</h5>
+	<ul>
+	
+		<li><a href="#depiction">foaf:depiction</a></li>
+	
+	</ul>
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#fundedBy">foaf:fundedBy</a></h4>
+	
+	
+	
+		<p>An organization funding a project or person.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#holdsAccount">foaf:holdsAccount</a></h4>
+	
+	
+	
+		<p>Indicates an account held by this agent.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="#OnlineAccount">foaf:OnlineAccount</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#homepage">foaf:homepage</a></h4>
+	
+	
+	
+		<p>A homepage for some thing.</p>
+	
+		<p>A homepage for some thing.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#InverseFunctionalProperty">http://www.w3.org/2002/07/owl#InverseFunctionalProperty</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="#Document">foaf:Document</a></li>
+	
+		<li><a href="#Document">foaf:Document</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#img">foaf:img</a></h4>
+	
+	
+	
+		<p>An image that can be used to represent some thing (ie. those depictions which are particularly representative of something, eg. one's photo on a homepage).</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="#Image">foaf:Image</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#interest">foaf:interest</a></h4>
+	
+	
+	
+		<p>A page about a topic of interest to this person.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="#Document">foaf:Document</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#knows">foaf:knows</a></h4>
+	
+	
+	
+		<p>A person known by this person (indicating some level of reciprocated interaction between the parties).</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#logo">foaf:logo</a></h4>
+	
+	
+	
+		<p>A logo representing some thing.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#made">foaf:made</a></h4>
+	
+	
+	
+		<p>Something that was made by this agent.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Inverse</h5>
+	<ul>
+	
+		<li><a href="#maker">foaf:maker</a></li>
+	
+	</ul>
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#maker">foaf:maker</a></h4>
+	
+	
+	
+		<p>An agent that  made this thing.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Inverse</h5>
+	<ul>
+	
+		<li><a href="#made">foaf:made</a></li>
+	
+	</ul>
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#mbox">foaf:mbox</a></h4>
+	
+	
+	
+		<p>A  personal mailbox, ie. an Internet mailbox associated with exactly one owner, the first owner of this mailbox. This is a 'static inverse functional property', in that  there is (across time and change) at most one individual that ever has any particular value for foaf:mbox.</p>
+	
+		<p>A  personal mailbox, ie. an Internet mailbox associated with exactly one owner, the first owner of this mailbox. This is a 'static inverse functional property', in that  there is (across time and change) at most one individual that ever has any particular value for foaf:mbox.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#InverseFunctionalProperty">http://www.w3.org/2002/07/owl#InverseFunctionalProperty</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#member">foaf:member</a></h4>
+	
+	
+	
+		<p>Indicates a member of a Group</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Group">foaf:Group</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#openid">foaf:openid</a></h4>
+	
+	
+	
+		<p>An OpenID for an Agent.</p>
+	
+		<p>An OpenID for an Agent.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#InverseFunctionalProperty">http://www.w3.org/2002/07/owl#InverseFunctionalProperty</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="#Document">foaf:Document</a></li>
+	
+		<li><a href="#Document">foaf:Document</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#page">foaf:page</a></h4>
+	
+	
+	
+		<p>A page or document about this thing.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="#Document">foaf:Document</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Inverse</h5>
+	<ul>
+	
+		<li><a href="#topic">foaf:topic</a></li>
+	
+	</ul>
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#pastProject">foaf:pastProject</a></h4>
+	
+	
+	
+		<p>A project this person has previously worked on.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#phone">foaf:phone</a></h4>
+	
+	
+	
+		<p>A phone,  specified using fully qualified tel: URI scheme (refs: http://www.w3.org/Addressing/schemes.html#tel).</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#primaryTopic">foaf:primaryTopic</a></h4>
+	
+	
+	
+		<p>The primary topic of some page or document.</p>
+	
+		<p>The primary topic of some page or document.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#FunctionalProperty">http://www.w3.org/2002/07/owl#FunctionalProperty</a></li>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Document">foaf:Document</a></li>
+	
+		<li><a href="#Document">foaf:Document</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Inverse</h5>
+	<ul>
+	
+		<li><a href="#isPrimaryTopicOf">foaf:isPrimaryTopicOf</a></li>
+	
+		<li><a href="#isPrimaryTopicOf">foaf:isPrimaryTopicOf</a></li>
+	
+	</ul>
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#publications">foaf:publications</a></h4>
+	
+	
+	
+		<p>A link to the publications of this person.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="#Document">foaf:Document</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#schoolHomepage">foaf:schoolHomepage</a></h4>
+	
+	
+	
+		<p>A homepage of a school attended by the person.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="#Document">foaf:Document</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#theme">foaf:theme</a></h4>
+	
+	
+	
+		<p>A theme.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#thumbnail">foaf:thumbnail</a></h4>
+	
+	
+	
+		<p>A derived thumbnail image.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Image">foaf:Image</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="#Image">foaf:Image</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#tipjar">foaf:tipjar</a></h4>
+	
+	
+	
+		<p>A tipjar document for this agent, describing means for payment and reward.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="#Document">foaf:Document</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#topic">foaf:topic</a></h4>
+	
+	
+	
+		<p>A topic of some page or document.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Document">foaf:Document</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Inverse</h5>
+	<ul>
+	
+		<li><a href="#page">foaf:page</a></li>
+	
+	</ul>
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#topic_interest">foaf:topic_interest</a></h4>
+	
+	
+	
+		<p>A thing of interest to this person.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#weblog">foaf:weblog</a></h4>
+	
+	
+	
+		<p>A weblog of some thing (whether person, group, company etc.).</p>
+	
+		<p>A weblog of some thing (whether person, group, company etc.).</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#InverseFunctionalProperty">http://www.w3.org/2002/07/owl#InverseFunctionalProperty</a></li>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="#Document">foaf:Document</a></li>
+	
+		<li><a href="#Document">foaf:Document</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#workInfoHomepage">foaf:workInfoHomepage</a></h4>
+	
+	
+	
+		<p>A work info homepage of some person; a page about their work for some organization.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="#Document">foaf:Document</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-otp">
+	<h4><a href="#workplaceHomepage">foaf:workplaceHomepage</a></h4>
+	
+	
+	
+		<p>A workplace homepage of some person; the homepage of an organization they work for.</p>
+	
+	
+	
+	
+	<h5>Type</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+	</ul>
+	
+
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="#Document">foaf:Document</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+
+				<h2>Datatype Properties</h2>
+
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#accountName">foaf:accountName</a></h4>
+	
+	
+	
+		<p>Indicates the name (identifier) associated with this online account.</p>
+	
+	
+
+	
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#OnlineAccount">foaf:OnlineAccount</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#age">foaf:age</a></h4>
+	
+	
+	
+		<p>The age in years of some agent.</p>
+	
+	
+
+	
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#aimChatID">foaf:aimChatID</a></h4>
+	
+	
+	
+		<p>An AIM chat ID</p>
+	
+	
+
+	
+	
+	<h5>Superprop</h5>
+	<ul>
+	
+		<li><a href="#nick">foaf:nick</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#birthday">foaf:birthday</a></h4>
+	
+	
+	
+		<p>The birthday of this Agent, represented in mm-dd string form, eg. '12-31'.</p>
+	
+	
+
+	
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#dnaChecksum">foaf:dnaChecksum</a></h4>
+	
+	
+	
+		<p>A checksum for the DNA of some thing. Joke.</p>
+	
+	
+
+	
+	
+	
+	
+	
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#familyName">foaf:familyName</a></h4>
+	
+	
+	
+		<p>The family name of some person.</p>
+	
+	
+
+	
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#family_name">foaf:family_name</a></h4>
+	
+	
+	
+		<p>The family name of some person.</p>
+	
+	
+
+	
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#firstName">foaf:firstName</a></h4>
+	
+	
+	
+		<p>The first name of a person.</p>
+	
+	
+
+	
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#geekcode">foaf:geekcode</a></h4>
+	
+	
+	
+		<p>A textual geekcode for this person, see http://www.geekcode.com/geek.html</p>
+	
+	
+
+	
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#gender">foaf:gender</a></h4>
+	
+	
+	
+		<p>The gender of this Agent (typically but not necessarily 'male' or 'female').</p>
+	
+	
+
+	
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#givenName">foaf:givenName</a></h4>
+	
+	
+	
+		<p>The given name of some person.</p>
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#givenname">foaf:givenname</a></h4>
+	
+	
+	
+		<p>The given name of some person.</p>
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#icqChatID">foaf:icqChatID</a></h4>
+	
+	
+	
+		<p>An ICQ chat ID</p>
+	
+	
+
+	
+	
+	<h5>Superprop</h5>
+	<ul>
+	
+		<li><a href="#nick">foaf:nick</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#jabberID">foaf:jabberID</a></h4>
+	
+	
+	
+		<p>A jabber ID for something.</p>
+	
+	
+
+	
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#lastName">foaf:lastName</a></h4>
+	
+	
+	
+		<p>The last name of a person.</p>
+	
+	
+
+	
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#mbox_sha1sum">foaf:mbox_sha1sum</a></h4>
+	
+	
+	
+		<p>The sha1sum of the URI of an Internet mailbox associated with exactly one owner, the  first owner of the mailbox.</p>
+	
+	
+
+	
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#msnChatID">foaf:msnChatID</a></h4>
+	
+	
+	
+		<p>An MSN chat ID</p>
+	
+	
+
+	
+	
+	<h5>Superprop</h5>
+	<ul>
+	
+		<li><a href="#nick">foaf:nick</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#myersBriggs">foaf:myersBriggs</a></h4>
+	
+	
+	
+		<p>A Myers Briggs (MBTI) personality classification.</p>
+	
+	
+
+	
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#name">foaf:name</a></h4>
+	
+	
+	
+		<p>A name for some thing.</p>
+	
+	
+
+	
+	
+	<h5>Superprop</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#label">http://www.w3.org/2000/01/rdf-schema#label</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#nick">foaf:nick</a></h4>
+	
+	
+	
+		<p>A short informal nickname characterising an agent (includes login identifiers, IRC and other chat nicknames).</p>
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#plan">foaf:plan</a></h4>
+	
+	
+	
+		<p>A .plan comment, in the tradition of finger and '.plan' files.</p>
+	
+	
+
+	
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#sha1">foaf:sha1</a></h4>
+	
+	
+	
+		<p>A sha1sum hash, in hex.</p>
+	
+	
+
+	
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Document">foaf:Document</a></li>
+	
+	</ul>
+	
+	
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#skypeID">foaf:skypeID</a></h4>
+	
+	
+	
+		<p>A Skype ID</p>
+	
+	
+
+	
+	
+	<h5>Superprop</h5>
+	<ul>
+	
+		<li><a href="#nick">foaf:nick</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#status">foaf:status</a></h4>
+	
+	
+	
+		<p>A string expressing what the user is happy for the general public (normally) to know about their current activity.</p>
+	
+	
+
+	
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#surname">foaf:surname</a></h4>
+	
+	
+	
+		<p>The surname of some person.</p>
+	
+	
+
+	
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Person">foaf:Person</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#title">foaf:title</a></h4>
+	
+	
+	
+		<p>Title (Mr, Mrs, Ms, Dr. etc)</p>
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</div>
+				
+					<a id=""></a>
+<div class="doc-section owl-dtp">
+	<h4><a href="#yahooChatID">foaf:yahooChatID</a></h4>
+	
+	
+	
+		<p>A Yahoo chat ID</p>
+	
+	
+
+	
+	
+	<h5>Superprop</h5>
+	<ul>
+	
+		<li><a href="#nick">foaf:nick</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Domain</h5>
+	<ul>
+	
+		<li><a href="#Agent">foaf:Agent</a></li>
+	
+	</ul>
+	
+	
+	
+	<h5>Range</h5>
+	<ul>
+	
+		<li><a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></li>
+	
+	</ul>
+	
+	
+	
+	
+</div>
+				
+				
+				<!-- 
+				<h2>Instances</h2>
+
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#Agent">foaf:Agent</a></h4>
+	
+	
+	
+		<p>An agent (eg. person, group, software or physical artifact).</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#Document">foaf:Document</a></h4>
+	
+	
+	
+		<p>A document.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#Group">foaf:Group</a></h4>
+	
+	
+	
+		<p>A class of Agents.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#Image">foaf:Image</a></h4>
+	
+	
+	
+		<p>An image.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#LabelProperty">foaf:LabelProperty</a></h4>
+	
+	
+	
+		<p>A foaf:LabelProperty is any RDF property with texual values that serve as labels.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#OnlineAccount">foaf:OnlineAccount</a></h4>
+	
+	
+	
+		<p>An online account.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#OnlineChatAccount">foaf:OnlineChatAccount</a></h4>
+	
+	
+	
+		<p>An online chat account.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#OnlineEcommerceAccount">foaf:OnlineEcommerceAccount</a></h4>
+	
+	
+	
+		<p>An online e-commerce account.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#OnlineGamingAccount">foaf:OnlineGamingAccount</a></h4>
+	
+	
+	
+		<p>An online gaming account.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#Organization">foaf:Organization</a></h4>
+	
+	
+	
+		<p>An organization.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#Person">foaf:Person</a></h4>
+	
+	
+	
+		<p>A person.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#PersonalProfileDocument">foaf:PersonalProfileDocument</a></h4>
+	
+	
+	
+		<p>A personal profile RDF document.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#Project">foaf:Project</a></h4>
+	
+	
+	
+		<p>A project (a collective endeavour of some kind).</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#account">foaf:account</a></h4>
+	
+	
+	
+		<p>Indicates an account held by this agent.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#accountName">foaf:accountName</a></h4>
+	
+	
+	
+		<p>Indicates the name (identifier) associated with this online account.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#accountServiceHomepage">foaf:accountServiceHomepage</a></h4>
+	
+	
+	
+		<p>Indicates a homepage of the service provide for this online account.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#age">foaf:age</a></h4>
+	
+	
+	
+		<p>The age in years of some agent.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#aimChatID">foaf:aimChatID</a></h4>
+	
+	
+	
+		<p>An AIM chat ID</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#based_near">foaf:based_near</a></h4>
+	
+	
+	
+		<p>A location that something is based near, for some broadly human notion of near.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#birthday">foaf:birthday</a></h4>
+	
+	
+	
+		<p>The birthday of this Agent, represented in mm-dd string form, eg. '12-31'.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#currentProject">foaf:currentProject</a></h4>
+	
+	
+	
+		<p>A current project this person works on.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#depiction">foaf:depiction</a></h4>
+	
+	
+	
+		<p>A depiction of some thing.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#depicts">foaf:depicts</a></h4>
+	
+	
+	
+		<p>A thing depicted in this representation.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#dnaChecksum">foaf:dnaChecksum</a></h4>
+	
+	
+	
+		<p>A checksum for the DNA of some thing. Joke.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#familyName">foaf:familyName</a></h4>
+	
+	
+	
+		<p>The family name of some person.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#family_name">foaf:family_name</a></h4>
+	
+	
+	
+		<p>The family name of some person.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#firstName">foaf:firstName</a></h4>
+	
+	
+	
+		<p>The first name of a person.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#fundedBy">foaf:fundedBy</a></h4>
+	
+	
+	
+		<p>An organization funding a project or person.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#geekcode">foaf:geekcode</a></h4>
+	
+	
+	
+		<p>A textual geekcode for this person, see http://www.geekcode.com/geek.html</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#gender">foaf:gender</a></h4>
+	
+	
+	
+		<p>The gender of this Agent (typically but not necessarily 'male' or 'female').</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#givenName">foaf:givenName</a></h4>
+	
+	
+	
+		<p>The given name of some person.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#givenname">foaf:givenname</a></h4>
+	
+	
+	
+		<p>The given name of some person.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#holdsAccount">foaf:holdsAccount</a></h4>
+	
+	
+	
+		<p>Indicates an account held by this agent.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#homepage">foaf:homepage</a></h4>
+	
+	
+	
+		<p>A homepage for some thing.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#icqChatID">foaf:icqChatID</a></h4>
+	
+	
+	
+		<p>An ICQ chat ID</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#img">foaf:img</a></h4>
+	
+	
+	
+		<p>An image that can be used to represent some thing (ie. those depictions which are particularly representative of something, eg. one's photo on a homepage).</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#interest">foaf:interest</a></h4>
+	
+	
+	
+		<p>A page about a topic of interest to this person.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#isPrimaryTopicOf">foaf:isPrimaryTopicOf</a></h4>
+	
+	
+	
+		<p>A document that this thing is the primary topic of.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#jabberID">foaf:jabberID</a></h4>
+	
+	
+	
+		<p>A jabber ID for something.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#knows">foaf:knows</a></h4>
+	
+	
+	
+		<p>A person known by this person (indicating some level of reciprocated interaction between the parties).</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#lastName">foaf:lastName</a></h4>
+	
+	
+	
+		<p>The last name of a person.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#logo">foaf:logo</a></h4>
+	
+	
+	
+		<p>A logo representing some thing.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#made">foaf:made</a></h4>
+	
+	
+	
+		<p>Something that was made by this agent.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#maker">foaf:maker</a></h4>
+	
+	
+	
+		<p>An agent that  made this thing.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#mbox">foaf:mbox</a></h4>
+	
+	
+	
+		<p>A  personal mailbox, ie. an Internet mailbox associated with exactly one owner, the first owner of this mailbox. This is a 'static inverse functional property', in that  there is (across time and change) at most one individual that ever has any particular value for foaf:mbox.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#mbox_sha1sum">foaf:mbox_sha1sum</a></h4>
+	
+	
+	
+		<p>The sha1sum of the URI of an Internet mailbox associated with exactly one owner, the  first owner of the mailbox.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#member">foaf:member</a></h4>
+	
+	
+	
+		<p>Indicates a member of a Group</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#membershipClass">foaf:membershipClass</a></h4>
+	
+	
+	
+		<p>Indicates the class of individuals that are a member of a Group</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#msnChatID">foaf:msnChatID</a></h4>
+	
+	
+	
+		<p>An MSN chat ID</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#myersBriggs">foaf:myersBriggs</a></h4>
+	
+	
+	
+		<p>A Myers Briggs (MBTI) personality classification.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#name">foaf:name</a></h4>
+	
+	
+	
+		<p>A name for some thing.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#nick">foaf:nick</a></h4>
+	
+	
+	
+		<p>A short informal nickname characterising an agent (includes login identifiers, IRC and other chat nicknames).</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#openid">foaf:openid</a></h4>
+	
+	
+	
+		<p>An OpenID for an Agent.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#page">foaf:page</a></h4>
+	
+	
+	
+		<p>A page or document about this thing.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#pastProject">foaf:pastProject</a></h4>
+	
+	
+	
+		<p>A project this person has previously worked on.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#phone">foaf:phone</a></h4>
+	
+	
+	
+		<p>A phone,  specified using fully qualified tel: URI scheme (refs: http://www.w3.org/Addressing/schemes.html#tel).</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#plan">foaf:plan</a></h4>
+	
+	
+	
+		<p>A .plan comment, in the tradition of finger and '.plan' files.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#primaryTopic">foaf:primaryTopic</a></h4>
+	
+	
+	
+		<p>The primary topic of some page or document.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#publications">foaf:publications</a></h4>
+	
+	
+	
+		<p>A link to the publications of this person.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#schoolHomepage">foaf:schoolHomepage</a></h4>
+	
+	
+	
+		<p>A homepage of a school attended by the person.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#sha1">foaf:sha1</a></h4>
+	
+	
+	
+		<p>A sha1sum hash, in hex.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#skypeID">foaf:skypeID</a></h4>
+	
+	
+	
+		<p>A Skype ID</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#status">foaf:status</a></h4>
+	
+	
+	
+		<p>A string expressing what the user is happy for the general public (normally) to know about their current activity.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#surname">foaf:surname</a></h4>
+	
+	
+	
+		<p>The surname of some person.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#theme">foaf:theme</a></h4>
+	
+	
+	
+		<p>A theme.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#thumbnail">foaf:thumbnail</a></h4>
+	
+	
+	
+		<p>A derived thumbnail image.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#tipjar">foaf:tipjar</a></h4>
+	
+	
+	
+		<p>A tipjar document for this agent, describing means for payment and reward.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#title">foaf:title</a></h4>
+	
+	
+	
+		<p>Title (Mr, Mrs, Ms, Dr. etc)</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#topic">foaf:topic</a></h4>
+	
+	
+	
+		<p>A topic of some page or document.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#topic_interest">foaf:topic_interest</a></h4>
+	
+	
+	
+		<p>A thing of interest to this person.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#weblog">foaf:weblog</a></h4>
+	
+	
+	
+		<p>A weblog of some thing (whether person, group, company etc.).</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#workInfoHomepage">foaf:workInfoHomepage</a></h4>
+	
+	
+	
+		<p>A work info homepage of some person; a page about their work for some organization.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#workplaceHomepage">foaf:workplaceHomepage</a></h4>
+	
+	
+	
+		<p>A workplace homepage of some person; the homepage of an organization they work for.</p>
+	
+	
+	
+</div>
+				
+					<div class="doc-section owl-dtp">
+	<h4><a href="#yahooChatID">foaf:yahooChatID</a></h4>
+	
+	
+	
+		<p>A Yahoo chat ID</p>
+	
+	
+	
+</div>
+				 -->
+
+				<footer>
+					Documentation generated by <a href="https://github.com/semanticarts/ontodoc">ontodoc</a> on Thursday, Jul 30 2015 at 14:15:27
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>
